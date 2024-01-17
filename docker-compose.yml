@@ -1,0 +1,7 @@
+version: "1.0"
+services:
+  cloudflare-dns-updater:
+    image: cloudflare-dns-updater:0.0.1
+    container_name: cloudflare-dns-updater
+    restart: always
+    command: -a 'API_KEY' -e 'EMAIL' -d '{"zone_id":"ZONE_ID", "domain":"DOMAIN", "proxied":false}'
